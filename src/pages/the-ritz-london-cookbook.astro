@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "The Ritz London: The Cookbook",
+  author: { "@type": "Person", name: "John Williams" },
+  publisher: "Mitchell Beazley",
+  datePublished: "2018",
+  numberOfPages: 240,
+  isbn: "9781784724962",
+  description:
+    "The Ritz London's first cookbook: 100 fine-dining recipes from the hotel's dining rooms, arranged by season.",
+};
+---
+
+<BaseLayout
+  title="The Ritz London Cookbook (2026 Guide) — Recipes, Price & Where to Buy"
+  description="Guide to The Ritz London cookbook by John Williams MBE: 100 recipes from the Ritz Restaurant, Palm Court and Rivoli Bar, Mitchell Beazley 2018, £30 at the official Ritz shop."
+  path="/the-ritz-london-cookbook/"
+  jsonLd={jsonLd}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Guide · The Ritz London · Cookbook
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Ritz London Cookbook
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Can't get a table — or want to cook like the kitchen? <strong>The Ritz London:
+      The Cookbook</strong> is the hotel's first recipe book, by Executive Chef
+      <strong>John Williams MBE</strong> (in the Ritz kitchen since 2004). This page
+      covers what's inside, the price, and where to buy it — from official sources.
+    </p>
+
+    <div class="prose-guide">
+      <h2>The facts</h2>
+      <ul>
+        <li><strong>Title:</strong> The Ritz London: The Cookbook</li>
+        <li><strong>Author:</strong> John Williams MBE, Executive Chef of The Ritz London</li>
+        <li><strong>Publisher:</strong> Mitchell Beazley (Hachette UK), 2018</li>
+        <li><strong>Format:</strong> hardcover, 240 pages, ISBN 9781784724962</li>
+        <li><strong>Price:</strong> £30.00 at the official Ritz online shop (checked October 2026)</li>
+      </ul>
+
+      <h2>What's inside</h2>
+      <p>
+        The book presents <strong>100 fine-dining recipes</strong> served across the
+        hotel's dining rooms — The Ritz Restaurant, the Palm Court, and the Rivoli Bar
+        (official Ritz shop page). The recipes are arranged in <strong>four seasonal
+        chapters</strong> — spring, summer, autumn, winter — and each season opens with a
+        creative cocktail-and-canapé pairing, followed by breakfasts and first courses,
+        mains, and desserts. In our own summary: it is the closest you can get to the
+        Ritz kitchen at home, written by the chef who has run it for two decades.
+      </p>
+
+      <h2>Where to buy</h2>
+      <p>
+        The official Ritz online gift shop sells it under "Culinary" — buying direct
+        supports the hotel. It is also stocked by major booksellers (Waterstones,
+        Amazon UK) — prices there vary, so compare before you buy.
+      </p>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/product/the-ritz-london-cookbook/" target="_blank" rel="noopener">Official Ritz shop — The Ritz London Cookbook (£30.00)</a></li>
+      </ul>
+
+      <h2>Worth knowing</h2>
+      <ul>
+        <li><strong>First of its kind:</strong> published in 2018, it was the hotel's first-ever recipe book.</li>
+        <li><strong>Fine-dining level:</strong> these are restaurant recipes — expect Escoffier technique, long ingredient lists, and serious ambition rather than weeknight cooking.</li>
+        <li><strong>Not a menu:</strong> for current restaurant prices and menus, see our <a href="/the-ritz-restaurant-menu/">restaurant menu guide</a> and <a href="/ritz-menu-prices/">price guide</a>.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/product/the-ritz-london-cookbook/" target="_blank" rel="noopener">The Ritz London Cookbook — official Ritz shop</a></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener">The Ritz Restaurant — official page</a></li>
+      </ul>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About this guide</p>
+      <p>
+        This is an independent guide and is not affiliated with The Ritz London.
+        Book details come from the official Ritz shop page and the publisher's listing
+        (Hachette UK), checked October 2026. Prices and availability change — verify
+        with the retailer before buying.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Ritz guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/the-ritz-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Ritz Restaurant menu</a> <span class="text-ink-soft">— full menu summary with official prices</span></li>
+        <li><a href="/ritz-menu-prices/" class="text-gold-dark font-semibold hover:underline">Menu prices — what dinner really costs</a> <span class="text-ink-soft">— realistic totals with service charge</span></li>
+        <li><a href="/ritz-afternoon-tea/" class="text-gold-dark font-semibold hover:underline">Afternoon tea at the Palm Court</a> <span class="text-ink-soft">— from £95 per adult</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
