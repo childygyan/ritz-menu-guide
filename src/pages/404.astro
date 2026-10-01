@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout
+  title="Page not found — The Ritz Menu Guide"
+  description="The page you're looking for doesn't exist. Browse our guides to dining at The Ritz London instead."
+  path="/404/"
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center">
+    <h1 class="font-display text-5xl font-bold">404</h1>
+    <p class="mt-4 text-lg text-ink-soft">
+      This page isn't on the menu.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+      <a href="/" class="rounded-full border border-gold px-5 py-2.5 text-gold-dark hover:bg-gold/10 transition-colors">← Home</a>
+      <a href="/the-ritz-restaurant-menu/" class="rounded-full border border-gold px-5 py-2.5 text-gold-dark hover:bg-gold/10 transition-colors">Restaurant menu</a>
+      <a href="/ritz-afternoon-tea/" class="rounded-full border border-gold px-5 py-2.5 text-gold-dark hover:bg-gold/10 transition-colors">Afternoon tea</a>
+    </div>
+  </article>
+</BaseLayout>

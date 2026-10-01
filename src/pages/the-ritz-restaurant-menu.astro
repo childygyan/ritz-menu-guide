@@ -1,0 +1,194 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Ritz Restaurant",
+  servesCuisine: ["British", "Contemporary British"],
+  priceRange: "£££££",
+  telephone: "+44-20-7300-2370",
+  url: "https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "150 Piccadilly",
+    addressLocality: "London",
+    postalCode: "W1J 9BR",
+    addressCountry: "GB",
+  },
+  description:
+    "The Ritz Restaurant at The Ritz London: two-Michelin-starred dining room in Mayfair serving the Epicurean Journey tasting menus and priced à la carte dishes.",
+};
+---
+
+<BaseLayout
+  title="The Ritz Restaurant Menu (2026) — Prices, Tasting Menus & Dishes | The Ritz Menu Guide"
+  description="Independent guide to The Ritz Restaurant's menu: Epicurean Journey 5-course £199 and 7-course £221, à la carte dishes with official August 2025 prices, Arts de la Table, hours, and the two Michelin stars."
+  path="/the-ritz-restaurant-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/ritz-restaurant.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/ritz-restaurant.webp"
+      alt="Illustration of an elegant fine-dining table with silver cloche and crystal glasses (illustrative artwork, not the actual Ritz)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · The Ritz London · Mayfair
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Ritz Restaurant — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Ritz Restaurant is the grand dining room of The Ritz London at 150 Piccadilly —
+      a two-Michelin-starred room (promoted in the 2025 Guide) that was named
+      <strong>Restaurant of the Year</strong> by the National Restaurant Awards 2025.
+      Executive Chef John Williams MBE, in the kitchen since 2004, cooks contemporary
+      British food built on classic Escoffier technique. This guide summarises the menus
+      and prices from the <strong>official Ritz menu (PDF, August 2025)</strong> in our own
+      words — with the official PDF linked below so you can read the full text yourself.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">150 Piccadilly, London W1J 9BR — The Ritz London</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">John Williams MBE, Executive Chef since 2004</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">Two Michelin stars (2025 Guide); National Restaurant Awards 2025 — Restaurant of the Year</dd></div>
+        <div><dt class="font-semibold text-ink">Lunch</dt><dd class="text-ink-soft">Daily 12:30 PM – 2:00 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Dinner</dt><dd class="text-ink-soft">Daily 6:30 PM – 9:00 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+44 (0) 20 7300 2370 (official site, October 2026)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The Epicurean Journey (tasting menus)</h2>
+      <p>
+        The signature experience is the Epicurean Journey — a tasting menu built around
+        "the love and knowledge of gourmet food and fine wine," available before
+        <strong>1:45 PM at lunch and 8:45 PM at dinner</strong> (official menu, August 2025).
+        Two lengths:
+      </p>
+      <ul>
+        <li><strong>Five-course experience — £199 per person.</strong> Optional five-glass wine pairing: Classic £117, Fine £221, Prestige £700.</li>
+        <li><strong>Seven-course experience — £221 per person.</strong> Optional six-glass wine pairing: Classic £140, Fine £254, Prestige £750.</li>
+      </ul>
+      <p>
+        All prices include VAT; a discretionary <strong>12.5% service charge</strong> is added
+        to the bill (official menu, August 2025). On Friday and Saturday evenings, choosing
+        the à la carte or Epicurean menus also carries a <strong>£58 per person
+        entertainment charge</strong> (live entertainment on those nights — official
+        restaurant page, October 2026).
+      </p>
+
+      <h2>À la carte — first courses</h2>
+      <p>
+        Sample starters from the official August 2025 menu (described in our own words):
+      </p>
+      <ul>
+        <li><strong>Dorset crab (£50)</strong> — with crème fraîche and imperial caviar.</li>
+        <li><strong>Langoustine (£55)</strong> — à la nage with bronze fennel.</li>
+        <li><strong>Ballotine of duck liver (£42)</strong> — with cherry and pistachio.</li>
+        <li><strong>Roast quail (£45)</strong> — with hazelnut and verjus.</li>
+        <li><strong>Pea velouté (£40)</strong> — with smoked bacon and pecorino.</li>
+      </ul>
+
+      <h2>À la carte — main courses</h2>
+      <ul>
+        <li><strong>Wild sea bass (£64)</strong> — with saffron and Menton lemon.</li>
+        <li><strong>Cornish turbot "Ton sur Ton" (£85)</strong> — the priciest main on the menu.</li>
+        <li><strong>Suffolk lamb (£65)</strong> — with Roscoff onion and mint.</li>
+        <li><strong>Brittany pigeon (£65)</strong> — with apricot and smoked almond.</li>
+        <li><strong>Fillet of veal (£68)</strong> — with English pea and lovage.</li>
+      </ul>
+
+      <h2>Arts de la Table — tableside classics</h2>
+      <p>
+        A Ritz signature: dishes finished or served at the table ("the timeless dining
+        tradition of table side service"). These <strong>serve two guests</strong> and need
+        about <strong>40 minutes' preparation</strong> (official menu, August 2025):
+      </p>
+      <ul>
+        <li><strong>Dover sole (£170)</strong> — "sentiments of the sea," for two.</li>
+        <li><strong>Beef Wellington (£150)</strong> — with hen of the wood mushrooms and Périgord truffle, for two.</li>
+        <li><strong>Crêpe Suzette (£65)</strong> — for two; the legendary flambéed dessert created by Henri Carpentier in 1895, prepared tableside.</li>
+      </ul>
+      <p>
+        A <strong>selection of artisan cheeses from the trolley</strong> is £33.
+      </p>
+
+      <h2>Desserts</h2>
+      <p>
+        All listed desserts are <strong>£27</strong> in the official August 2025 menu —
+        the Ritz chocolate soufflé with vanilla chantilly, the Ritz signature chocolate
+        with hazelnut and fudge, a vanilla–almond praline dessert with Dulcey and banana
+        ice cream, rum-soaked baba with exotic fruits and vanilla, and English strawberry
+        with lemon verbena and lime.
+      </p>
+
+      <h2>Champagne &amp; wine</h2>
+      <p>
+        The menu lists a "Champagne of the month" — at the time of the August 2025 menu,
+        a Taittinger selection: Brut Réserve NV £28 (glass, 150ml) / £130 (bottle),
+        Prestige Rosé NV £32 / £150, Vintage Brut 2016 £38 / £175, Comtes de Champagne
+        2013 £78 / £365, and Comtes de Champagne Rosé 2011 at £640. Champagne selections
+        rotate, so check the current menu.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one visit, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The full occasion:</strong> the five-course Epicurean Journey at £199 — it's the menu the room is built around, and only £22 less than the seven-course.</li>
+        <li><strong>À la carte pick:</strong> the langoustine à la nage (£55) to start, the turbot (£85) for main — the two dishes the kitchen is most associated with.</li>
+        <li><strong>The theatre:</strong> the tableside crêpe Suzette (£65 for two) — it's a piece of dining history, and you can't get this performance many places.</li>
+        <li><strong>Watch the extras:</strong> Friday/Saturday adds £58pp entertainment on top of menu prices, before the 12.5% service charge. See our <a href="/ritz-menu-prices/">price guide</a> for realistic totals.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book well ahead:</strong> see our <a href="/ritz-booking-guide/">booking guide</a> for how far ahead to reserve and the dress code (jacket and tie for gentlemen).</li>
+        <li><strong>Breakfast is for residents first:</strong> the restaurant serves breakfast 7:30–10:30 AM for hotel residents, 7:30–10:00 AM for non-residents.</li>
+        <li><strong>Dietary needs:</strong> allergen, vegan and vegetarian menus are available — tell the team when booking, per the official menu.</li>
+        <li><strong>The room:</strong> lunch and dinner are served beneath the restaurant's soaring glass roof — widely considered one of the most beautiful dining rooms in London.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener">Official restaurant page — theritzlondon.com</a></li>
+        <li><a href="https://www.theritzlondon.com/content/uploads/2025/08/ALC-Menu-040825.pdf" target="_blank" rel="noopener">Official menu (PDF, August 2025) — full priced menu</a></li>
+        <li><a href="https://www.theritzlondon.com/press-release/the-ritz-restaurant-awarded-two-michelin-stars/" target="_blank" rel="noopener">Two Michelin stars — Ritz announcement (Feb 2025)</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above come from the <strong>official Ritz restaurant menu (PDF, August
+        2025)</strong>, checked October 2026. Prices include VAT; a discretionary 12.5%
+        service charge is added to the bill. Menus and prices change with the seasons —
+        always verify with the hotel before visiting. Descriptions are our own summaries;
+        the official PDF linked above carries the full menu text.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Ritz guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/ritz-menu-prices/" class="text-gold-dark font-semibold hover:underline">Menu prices — what dinner really costs</a> <span class="text-ink-soft">— realistic totals with service charge</span></li>
+        <li><a href="/ritz-afternoon-tea/" class="text-gold-dark font-semibold hover:underline">Afternoon tea at the Palm Court</a> <span class="text-ink-soft">— from £95 per adult</span></li>
+        <li><a href="/ritz-booking-guide/" class="text-gold-dark font-semibold hover:underline">How to book</a> <span class="text-ink-soft">— reservations, dress code, tips</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

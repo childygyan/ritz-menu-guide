@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Afternoon Tea at The Ritz London",
+  servesCuisine: ["British", "Afternoon Tea"],
+  priceRange: "£££££",
+  telephone: "+44-20-7300-2345",
+  url: "https://www.theritzlondon.com/dine-with-us/afternoon-tea/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "150 Piccadilly",
+    addressLocality: "London",
+    postalCode: "W1J 9BR",
+    addressCountry: "GB",
+  },
+  description:
+    "Afternoon tea at The Ritz London's Palm Court: finger sandwiches, scones, seasonal cakes, loose-leaf teas, served daily in five sittings.",
+};
+---
+
+<BaseLayout
+  title="Ritz Afternoon Tea (2026) — Prices, Sittings & Dress Code | The Ritz Menu Guide"
+  description="Independent guide to afternoon tea at The Ritz London: from £95 per adult, five daily sittings, what's served, the dress code, and booking tips — from the official Ritz page."
+  path="/ritz-afternoon-tea/"
+  jsonLd={jsonLd}
+  ogImage="/images/afternoon-tea.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/afternoon-tea.webp"
+      alt="Illustration of a three-tiered afternoon tea stand with sandwiches, scones and pastries (illustrative artwork, not the actual Ritz)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · The Ritz London · Palm Court
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Afternoon Tea — Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Afternoon tea at The Ritz is served in the <strong>Palm Court</strong> — the gilded,
+      palm-lined room that set the standard for the whole ritual. It's arguably the most
+      famous afternoon tea in London: a live musical ensemble plays throughout, and the
+      hotel is home to the <strong>UK's only certified Tea Master</strong>, who sources
+      the loose-leaf teas worldwide (including the Ritz Royal Blend, available only here).
+      All facts below come from the <strong>official Ritz afternoon tea page</strong>,
+      checked October 2026.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Where</dt><dd class="text-ink-soft">The Palm Court, The Ritz London, 150 Piccadilly</dd></div>
+        <div><dt class="font-semibold text-ink">Price</dt><dd class="text-ink-soft">From £95 per adult, £73 per child</dd></div>
+        <div><dt class="font-semibold text-ink">Sittings</dt><dd class="text-ink-soft">Daily: 11:30 AM, 1:30 PM, 3:30 PM, 5:30 PM, 7:30 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Dress code</dt><dd class="text-ink-soft">Formal — jacket and tie for gentlemen; not required for children under 16</dd></div>
+        <div><dt class="font-semibold text-ink">Music</dt><dd class="text-ink-soft">Live musical ensemble throughout the sitting</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+44 (0) 20 7300 2345 (official page, October 2026)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>What's served</h2>
+      <p>
+        In the Ritz's own words (summarised): the tea opens with delicate finger sandwiches,
+        followed by freshly baked scones with clotted cream and jam, and finishes with cakes
+        served tableside from the guéridon trolley — the pastry chefs' chocolate, fruit, and
+        signature creations change with the seasons. Teas are loose-leaf, sourced from
+        plantations worldwide, and include the exclusive Ritz Royal Blend.
+      </p>
+      <ul>
+        <li><strong>Sandwiches:</strong> traditional finger sandwiches (fillings rotate).</li>
+        <li><strong>Scones:</strong> served warm with clotted cream and preserves.</li>
+        <li><strong>Cakes:</strong> seasonal selection served tableside from the trolley.</li>
+        <li><strong>Tea:</strong> loose-leaf selection including the Ritz Royal Blend — the UK's only certified Tea Master sources them.</li>
+      </ul>
+      <p>
+        Vegan, vegetarian, and gluten-free afternoon tea menus are available on request —
+        tell the hotel about dietary needs <strong>before</strong> your visit, as the page
+        notes they can't accommodate specific allergies with extra menu adjustments on the day.
+      </p>
+
+      <h2>Prices</h2>
+      <p>
+        From the official page (October 2026): afternoon tea <strong>starts from £95 for
+        adults and £73 for children</strong>. Champagne and other upgrades cost more — the
+        official page lists the starting prices; check the current page or ask when booking
+        for the full tariff.
+      </p>
+
+      <h2>Sittings &amp; booking</h2>
+      <p>
+        Five sittings daily: <strong>11:30 AM, 1:30 PM, 3:30 PM, 5:30 PM, and 7:30
+        PM</strong>. This is one of London's most in-demand afternoon teas — weekend
+        sittings can sell out many weeks ahead. Book as early as you can; see our
+        <a href="/ritz-booking-guide/">booking guide</a> for the details.
+      </p>
+
+      <h2>Dress code</h2>
+      <p>
+        The Ritz enforces a formal dress code: <strong>gentlemen must wear a jacket and
+        tie</strong>; jeans and sportswear are not permitted. The dress code does not apply
+        to children under 16. When in doubt, overdress — the Palm Court rewards it.
+      </p>
+
+      <h2>What we'd do</h2>
+      <ul>
+        <li><strong>Pick your sitting with the light in mind:</strong> the Palm Court's glass roof is at its best in daylight — the 1:30 PM or 3:30 PM sittings.</li>
+        <li><strong>Book the earliest date you can:</strong> this is a once-in-a-lifetime room; don't leave the reservation to the last minute.</li>
+        <li><strong>Eat light beforehand:</strong> three tiers plus tableside cakes is a full meal.</li>
+        <li><strong>Ask about the teas:</strong> with the UK's only certified Tea Master behind the list, the tea is half the experience — the Ritz Royal Blend is exclusive to the hotel.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/afternoon-tea/" target="_blank" rel="noopener">Official afternoon tea page — theritzlondon.com</a></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener">The Ritz Restaurant — official page</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The £95 / £73 starting prices come from the <strong>official Ritz afternoon tea
+        page</strong>, checked October 2026. Upgrades (champagne and others) cost more.
+        Prices and sittings can change — always verify with the hotel before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Ritz guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/ritz-menu-prices/" class="text-gold-dark font-semibold hover:underline">Menu prices — what dining really costs</a> <span class="text-ink-soft">— realistic totals with service charge</span></li>
+        <li><a href="/the-ritz-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Ritz Restaurant menu</a> <span class="text-ink-soft">— tasting menus and à la carte prices</span></li>
+        <li><a href="/ritz-booking-guide/" class="text-gold-dark font-semibold hover:underline">How to book</a> <span class="text-ink-soft">— reservations, dress code, tips</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does dinner cost at The Ritz London?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Epicurean Journey tasting menu costs £199 (five courses) or £221 (seven courses) per person from the official August 2025 menu, plus a discretionary 12.5% service charge — about £224 and £249 respectively. An à la carte dinner of starter, main and dessert typically runs £165–£190 per person before extras.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much is afternoon tea at The Ritz?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Afternoon tea at The Ritz London starts from £95 per adult and £73 per child, per the official Ritz page (October 2026). Champagne and other upgrades cost more.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a service charge at The Ritz restaurant?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — a discretionary 12.5% service charge is added to the bill at The Ritz Restaurant (official menu, August 2025). On Friday and Saturday evenings there is also a £58 per person entertainment charge on the à la carte and Epicurean menus.",
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="The Ritz London Menu Prices (2026) — What Dinner & Afternoon Tea Really Cost"
+  description="Realistic Ritz London menu prices: Epicurean Journey £199/£221, à la carte dishes, afternoon tea from £95, plus the 12.5% service charge and weekend entertainment fee — all from official Ritz sources."
+  path="/ritz-menu-prices/"
+  jsonLd={jsonLd}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Price Guide · From Official Ritz Sources · October 2026
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Ritz London Menu Prices
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      "The Ritz London menu prices" is one of the fastest-rising searches about the hotel —
+      and the menu price is never the whole bill. This guide builds realistic per-person
+      totals from <strong>official Ritz prices</strong> (the August 2025 restaurant menu
+      PDF and the official afternoon tea page), adding the charges the Ritz itself
+      discloses: the <strong>12.5% discretionary service charge</strong> and the
+      <strong>£58 per person Friday/Saturday entertainment charge</strong>.
+    </p>
+
+    <div class="prose-guide">
+      <h2>Tasting menus — realistic totals</h2>
+      <p>
+        The Epicurean Journey (official menu, August 2025). "Menu price + 12.5%" is the
+        minimum realistic total — before any drinks beyond the pairing:
+      </p>
+      <div class="overflow-x-auto not-prose">
+        <table class="w-full text-sm border border-line rounded-xl overflow-hidden bg-white">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="p-3 font-semibold">Option</th>
+              <th class="p-3 font-semibold">Menu price</th>
+              <th class="p-3 font-semibold">+ 12.5% service</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-soft">
+            <tr class="border-t border-line">
+              <td class="p-3">Epicurean Journey, 5 courses</td>
+              <td class="p-3">£199</td>
+              <td class="p-3 font-semibold text-ink">≈ £223.88</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">Epicurean Journey, 7 courses</td>
+              <td class="p-3">£221</td>
+              <td class="p-3 font-semibold text-ink">≈ £248.63</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">5 courses + Classic wine pairing (£117)</td>
+              <td class="p-3">£316</td>
+              <td class="p-3 font-semibold text-ink">≈ £355.50</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">7 courses + Fine wine pairing (£254)</td>
+              <td class="p-3">£475</td>
+              <td class="p-3 font-semibold text-ink">≈ £534.38</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">7 courses + Prestige pairing (£750)</td>
+              <td class="p-3">£971</td>
+              <td class="p-3 font-semibold text-ink">≈ £1,092.38</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm">
+        Wine pairing prices are per person from the official menu: five-course pairings
+        Classic £117 / Fine £221 / Prestige £700; seven-course pairings Classic £140 /
+        Fine £254 / Prestige £750.
+      </p>
+
+      <h2>À la carte dinner — a realistic example</h2>
+      <p>
+        The Ritz publishes no fixed-price dinner; this example uses official à la carte
+        prices (August 2025) for a typical three-course dinner — starter, main, dessert:
+      </p>
+      <div class="overflow-x-auto not-prose">
+        <table class="w-full text-sm border border-line rounded-xl overflow-hidden bg-white">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="p-3 font-semibold">Course</th>
+              <th class="p-3 font-semibold">Example dish</th>
+              <th class="p-3 font-semibold">Official price</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-soft">
+            <tr class="border-t border-line">
+              <td class="p-3">Starter</td>
+              <td class="p-3">Langoustine à la nage</td>
+              <td class="p-3">£55</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">Main</td>
+              <td class="p-3">Cornish turbot "Ton sur Ton"</td>
+              <td class="p-3">£85</td>
+            </tr>
+            <tr class="border-t border-line">
+              <td class="p-3">Dessert</td>
+              <td class="p-3">Ritz chocolate soufflé</td>
+              <td class="p-3">£27</td>
+            </tr>
+            <tr class="border-t border-line font-semibold text-ink">
+              <td class="p-3" colspan="2">Food subtotal</td>
+              <td class="p-3">£167</td>
+            </tr>
+            <tr class="border-t border-line font-semibold text-ink">
+              <td class="p-3" colspan="2">+ 12.5% service charge</td>
+              <td class="p-3">≈ £187.88</td>
+            </tr>
+            <tr class="border-t border-line font-semibold text-ink">
+              <td class="p-3" colspan="2">Friday/Saturday: + £58 entertainment</td>
+              <td class="p-3">≈ £253.13</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm">
+        A lighter à la carte dinner (pea velouté £40 + Suffolk lamb £65 + dessert £27 =
+        £132) comes to about <strong>£148.50</strong> with service. Add wine, water, and
+        coffee on top — none is included in these figures.
+      </p>
+
+      <h2>Afternoon tea</h2>
+      <p>
+        From the official Ritz page (October 2026): <strong>from £95 per adult, £73 per
+        child</strong>. Champagne and other upgrades cost more — the official page lists
+        starting prices, so confirm the full tariff when booking. Note: the 12.5% service
+        charge is disclosed on the <em>restaurant</em> menu; the afternoon tea page does
+        not state a service charge, so ask at booking if you want the exact total.
+      </p>
+
+      <h2>Charges people miss</h2>
+      <ul>
+        <li><strong>12.5% discretionary service charge</strong> — added to the restaurant bill (official menu, August 2025).</li>
+        <li><strong>£58 per person entertainment charge</strong> — Friday and Saturday evenings, on à la carte and Epicurean menus (official restaurant page, October 2026).</li>
+        <li><strong>Tableside dishes serve two</strong> — the £150–£170 Arts de la Table prices (Dover sole, Beef Wellington) cover two guests, not one.</li>
+        <li><strong>VAT is included</strong> in all listed prices — the figures above are what you see before the service charge.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/content/uploads/2025/08/ALC-Menu-040825.pdf" target="_blank" rel="noopener">Official restaurant menu (PDF, August 2025) — every price above</a></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener">Official restaurant page — hours, entertainment charge</a></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/afternoon-tea/" target="_blank" rel="noopener">Official afternoon tea page — sittings and starting prices</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Menu prices and the 12.5% service charge come from the <strong>official Ritz
+        restaurant menu (PDF, August 2025)</strong>; afternoon tea prices from the
+        <strong>official Ritz page</strong> (October 2026). The "realistic totals" are our
+        arithmetic on those official figures — not quotes from the hotel. Menus and prices
+        change; always verify with the hotel before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Ritz guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/the-ritz-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Ritz Restaurant menu</a> <span class="text-ink-soft">— full menu summary with official prices</span></li>
+        <li><a href="/ritz-afternoon-tea/" class="text-gold-dark font-semibold hover:underline">Afternoon tea</a> <span class="text-ink-soft">— from £95 per adult</span></li>
+        <li><a href="/ritz-booking-guide/" class="text-gold-dark font-semibold hover:underline">How to book</a> <span class="text-ink-soft">— reservations, dress code, tips</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

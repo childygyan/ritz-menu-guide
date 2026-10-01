@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "The Ritz Menu Guide",
+  url: "https://ritz-menu-guide.pages.dev/",
+  description:
+    "Independent guides to dining at The Ritz London: the two-Michelin-starred Ritz Restaurant's menus and prices, Palm Court afternoon tea, and how to book.",
+  inLanguage: "en-GB",
+};
+---
+
+<BaseLayout
+  title="The Ritz Menu Guide — Menus, Prices & Booking at The Ritz London"
+  description="Independent guides to dining at The Ritz London: The Ritz Restaurant's tasting and à la carte menus with official prices, Palm Court afternoon tea, realistic cost tables, and how to book."
+  path="/"
+  jsonLd={jsonLd}
+  ogImage="/images/hero-home.webp"
+>
+  <section class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/hero-home.webp"
+      alt="Illustration of a grand luxury hotel dining room with chandeliers and marble columns (illustrative artwork, not the actual Ritz)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Independent · Original · Updated October 2026
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Ritz Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      Everything you want to know about eating at <strong>The Ritz London</strong> — the menus,
+      the real prices, and how to book — in one place. The Ritz Restaurant holds
+      <strong>two Michelin stars</strong> (promoted in the 2025 Guide) and was named
+      <strong>Restaurant of the Year</strong> by the National Restaurant Awards 2025.
+      Its Palm Court afternoon tea is the most famous in London. Every price here comes
+      from an official Ritz source and is dated — written in our own words, never copied.
+    </p>
+
+    <div class="mt-6 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed max-w-3xl">
+      <p class="font-semibold text-ink mb-1">Independent &amp; unaffiliated</p>
+      <p>
+        This site is not affiliated with, endorsed by, or connected to The Ritz London.
+        Illustrations are original artwork. Prices change — always verify with the hotel
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Guide cards -->
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      <a
+        href="/the-ritz-restaurant-menu/"
+        class="group block rounded-2xl border border-line bg-white overflow-hidden hover:shadow-lg hover:border-gold transition-all"
+      >
+        <img
+          src="/images/ritz-restaurant.webp"
+          alt="Illustration of an elegant fine-dining table with silver cloche and crystal glasses (illustrative artwork)"
+          class="w-full h-44 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h2 class="font-display text-xl font-bold group-hover:text-gold-dark transition-colors">
+            The Ritz Restaurant — Menu Guide
+          </h2>
+          <p class="mt-2 text-sm text-ink-soft leading-relaxed">
+            The Epicurean Journey tasting menus (£199 / £221), à la carte dishes with official
+            prices, Arts de la Table, and desserts — from the official August 2025 menu.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+
+      <a
+        href="/ritz-afternoon-tea/"
+        class="group block rounded-2xl border border-line bg-white overflow-hidden hover:shadow-lg hover:border-gold transition-all"
+      >
+        <img
+          src="/images/afternoon-tea.webp"
+          alt="Illustration of a three-tiered afternoon tea stand with sandwiches, scones and pastries (illustrative artwork)"
+          class="w-full h-44 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h2 class="font-display text-xl font-bold group-hover:text-gold-dark transition-colors">
+            Afternoon Tea — Guide
+          </h2>
+          <p class="mt-2 text-sm text-ink-soft leading-relaxed">
+            Palm Court afternoon tea: what's served, prices from £95, the five daily sittings,
+            the dress code, and booking advice — from the official Ritz page.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+
+      <a
+        href="/ritz-menu-prices/"
+        class="group block rounded-2xl border border-line bg-white overflow-hidden hover:shadow-lg hover:border-gold transition-all"
+      >
+        <img
+          src="/images/hero-home.webp"
+          alt="Illustration of a grand hotel dining room (illustrative artwork)"
+          class="w-full h-44 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h2 class="font-display text-xl font-bold group-hover:text-gold-dark transition-colors">
+            Menu Prices — Guide
+          </h2>
+          <p class="mt-2 text-sm text-ink-soft leading-relaxed">
+            What dinner really costs: realistic per-person totals for lunch, tasting menus,
+            afternoon tea — plus the 12.5% service charge and the Friday/Saturday entertainment fee.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+
+      <a
+        href="/ritz-booking-guide/"
+        class="group block rounded-2xl border border-line bg-white overflow-hidden hover:shadow-lg hover:border-gold transition-all"
+      >
+        <img
+          src="/images/booking.webp"
+          alt="Illustration of a luxury hotel reception desk (illustrative artwork)"
+          class="w-full h-44 object-cover"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <h2 class="font-display text-xl font-bold group-hover:text-gold-dark transition-colors">
+            Booking Guide
+          </h2>
+          <p class="mt-2 text-sm text-ink-soft leading-relaxed">
+            How to book the restaurant and afternoon tea, how far ahead to reserve, the dress
+            code, and what to know before you go.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Why this site -->
+    <div class="prose-guide mt-14 max-w-3xl">
+      <h2>Why a whole site about one hotel's menus?</h2>
+      <p>
+        Because "ritz london menu" is one of the most-searched hotel-restaurant menu queries
+        in the UK — and "the ritz london menu prices" is rising fast. Yet the information is
+        scattered across the hotel's own pages, review sites, and dated blog posts. This site
+        puts the official facts in one honest place: what each dining option costs, what you
+        actually get, and what to expect — with every price traced to an official Ritz source
+        and dated, so you know how fresh it is.
+      </p>
+      <h2>What you'll find here</h2>
+      <ul>
+        <li><strong>Official prices, dated.</strong> Every figure cites the official Ritz menu or page it came from, with the month it was published.</li>
+        <li><strong>Realistic totals.</strong> The menu price is never the whole bill — we add the 12.5% discretionary service charge, the weekend entertainment fee, and typical extras.</li>
+        <li><strong>No copied menus.</strong> We describe and summarise the menus in our own words and link to the official PDFs — we don't reprint them.</li>
+        <li><strong>No invented facts.</strong> Where the Ritz doesn't publish something, we say so plainly instead of guessing.</li>
+      </ul>
+    </div>
+
+    <!-- Official links -->
+    <div class="mt-10 max-w-3xl rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="font-display text-xl font-bold">Official Ritz links</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener" class="text-gold-dark font-semibold hover:underline">The Ritz Restaurant — official page</a> <span class="text-ink-soft">— hours, menus, contact</span></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/afternoon-tea/" target="_blank" rel="noopener" class="text-gold-dark font-semibold hover:underline">Afternoon Tea — official page</a> <span class="text-ink-soft">— sittings, prices, dress code</span></li>
+        <li><a href="https://www.theritzlondon.com/content/uploads/2025/08/ALC-Menu-040825.pdf" target="_blank" rel="noopener" class="text-gold-dark font-semibold hover:underline">Official restaurant menu (PDF, August 2025)</a> <span class="text-ink-soft">— the priced à la carte &amp; tasting menu</span></li>
+        <li><a href="https://www.theritzlondon.com/press-release/the-ritz-restaurant-awarded-two-michelin-stars/" target="_blank" rel="noopener" class="text-gold-dark font-semibold hover:underline">Two Michelin stars — Ritz announcement</a> <span class="text-ink-soft">— awarded February 2025</span></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

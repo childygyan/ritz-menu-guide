@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout
+  title="How to Book The Ritz London — Restaurant & Afternoon Tea Reservations"
+  description="How to book The Ritz Restaurant and afternoon tea: where to reserve, how far ahead, the dress code, contact details, and what to know before you go."
+  path="/ritz-booking-guide/"
+  ogImage="/images/booking.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/booking.webp"
+      alt="Illustration of a luxury hotel reception desk (illustrative artwork, not the actual Ritz)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Booking Guide · The Ritz London · October 2026
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Booking Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Both the restaurant and afternoon tea at The Ritz are bookable directly with the
+      hotel — and both can sell out, especially at weekends. Here's how to reserve, how
+      far ahead to plan, and the rules to know before you arrive. Facts from the
+      <strong>official Ritz pages</strong>, checked October 2026.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Restaurant reservations</dt><dd class="text-ink-soft">Via the official Ritz site; phone +44 (0) 20 7300 2370</dd></div>
+        <div><dt class="font-semibold text-ink">Afternoon tea reservations</dt><dd class="text-ink-soft">Via the official Ritz site; phone +44 (0) 20 7300 2345</dd></div>
+        <div><dt class="font-semibold text-ink">Restaurant hours</dt><dd class="text-ink-soft">Lunch daily 12:30–2:00 PM; dinner daily 6:30–9:00 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Tea sittings</dt><dd class="text-ink-soft">Daily 11:30 AM, 1:30 PM, 3:30 PM, 5:30 PM, 7:30 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Dress code</dt><dd class="text-ink-soft">Jacket and tie for gentlemen; no jeans or sportswear</dd></div>
+        <div><dt class="font-semibold text-ink">Address</dt><dd class="text-ink-soft">150 Piccadilly, London W1J 9BR</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>How to book the restaurant</h2>
+      <p>
+        Reserve through the official Ritz website's dining pages or by phone on
+        <strong>+44 (0) 20 7300 2370</strong>. The restaurant serves lunch daily
+        12:30–2:00 PM and dinner daily 6:30–9:00 PM. Note the Epicurean Journey tasting
+        menus are only available <strong>before 1:45 PM at lunch and 8:45 PM at
+        dinner</strong> — book an early enough table if you want the tasting menu.
+      </p>
+
+      <h2>How to book afternoon tea</h2>
+      <p>
+        Reserve through the official afternoon tea page or by phone on
+        <strong>+44 (0) 20 7300 2345</strong>. Five sittings daily (11:30 AM, 1:30 PM,
+        3:30 PM, 5:30 PM, 7:30 PM). This is one of the hardest afternoon teas in London
+        to get into — book as far ahead as your plans allow, especially for weekends.
+        Tell the hotel about dietary needs (vegan, vegetarian, gluten-free options exist)
+        <strong>before</strong> your visit.
+      </p>
+
+      <h2>The dress code</h2>
+      <p>
+        The Ritz enforces it — this is not a suggestion:
+      </p>
+      <ul>
+        <li><strong>Gentlemen:</strong> jacket and tie required.</li>
+        <li><strong>Everyone:</strong> no jeans, no sportswear, no trainers.</li>
+        <li><strong>Children under 16</strong> are exempt from the dress code.</li>
+      </ul>
+      <p>
+        Arrive underdressed and you risk being turned away — when in doubt, overdress.
+      </p>
+
+      <h2>Good to know before you go</h2>
+      <ul>
+        <li><strong>Friday/Saturday restaurant surcharge:</strong> £58 per person entertainment charge on à la carte and Epicurean menus — factor it into the budget (see our <a href="/ritz-menu-prices/">price guide</a>).</li>
+        <li><strong>Service charge:</strong> 12.5% discretionary on the restaurant bill; prices include VAT.</li>
+        <li><strong>Tableside dishes need time:</strong> the Arts de la Table dishes (Dover sole, Beef Wellington) serve two and need ~40 minutes' preparation.</li>
+        <li><strong>Live music:</strong> entertainment on Friday and Saturday evenings in the restaurant; a musical ensemble plays throughout afternoon tea.</li>
+        <li><strong>The room matters:</strong> lunch and dinner are served under the restaurant's famous glass roof — widely called one of the most beautiful dining rooms in the world.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/the-ritz-restaurant/" target="_blank" rel="noopener">The Ritz Restaurant — official page &amp; reservations</a></li>
+        <li><a href="https://www.theritzlondon.com/dine-with-us/afternoon-tea/" target="_blank" rel="noopener">Afternoon Tea — official page &amp; reservations</a></li>
+        <li><a href="https://www.theritzlondon.com/content/uploads/2025/08/ALC-Menu-040825.pdf" target="_blank" rel="noopener">Official restaurant menu (PDF, August 2025)</a></li>
+      </ul>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Ritz guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/the-ritz-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Ritz Restaurant menu</a> <span class="text-ink-soft">— tasting menus and à la carte prices</span></li>
+        <li><a href="/ritz-afternoon-tea/" class="text-gold-dark font-semibold hover:underline">Afternoon tea</a> <span class="text-ink-soft">— sittings, prices, dress code</span></li>
+        <li><a href="/ritz-menu-prices/" class="text-gold-dark font-semibold hover:underline">Menu prices</a> <span class="text-ink-soft">— realistic totals with service charge</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
