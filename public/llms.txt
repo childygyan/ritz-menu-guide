@@ -1,0 +1,59 @@
+# The Ritz Menu Guide — llms.txt
+
+> Independent guide to dining at The Ritz London (150 Piccadilly): the Ritz
+> Restaurant's menus and prices, Palm Court afternoon tea, lunch, the hotel
+> cookbook, and how to book. Built and maintained by Firoz Khan of FK Digital
+> Media. Not affiliated with The Ritz London.
+
+## What this site does
+
+- The Ritz Restaurant menu guide: the Epicurean Journey tasting menus
+  (five-course £215 / seven-course £235, September 2026 official menu), weekday
+  three-course lunch (£105, Monday–Friday), à la carte dishes with official
+  prices, Arts de la Table tableside dishes, desserts, and champagne.
+- Lunch at The Ritz: hours (daily 12:30 PM – 2:00 PM), lunch pricing, and the
+  note that the £58 Friday/Saturday entertainment charge is evenings-only.
+- Menu prices guide: realistic per-person totals built from official Ritz
+  prices plus the disclosed 12.5% discretionary service charge and the
+  weekend entertainment fee. Totals are the site's own arithmetic, labelled
+  as such — not quotes from the hotel.
+- Afternoon tea guide: Palm Court sittings (five daily), what's served, prices
+  from £95 per adult / £73 per child, dress code, and an afternoon-tea vs
+  high-tea clarification.
+- Booking guide: how to book the restaurant and afternoon tea, dress code
+  (jacket and tie for gentlemen), and planning tips.
+- The Ritz London Cookbook guide: John Williams MBE's 100-recipe cookbook
+  (Mitchell Beazley, 2018) — contents, £30 price, official Ritz shop link.
+
+## Honest limitations (stated on the site itself)
+
+- Every price is dated and traced to an official Ritz source (official menu
+  PDFs or theritzlondon.com pages); menus and prices change seasonally, and
+  readers are told to verify with the hotel before visiting.
+- Menu descriptions are the site's own summaries in original words — full
+  menus are never copied; official PDFs are linked instead.
+- Illustrations are AI-generated and labelled as illustrative artwork, not
+  photographs of actual Ritz dishes.
+- This site is not affiliated with, endorsed by, or connected to The Ritz
+  London or its owners.
+
+## Pages
+
+- https://ritzmenuguide.org/ — home, all guides
+- https://ritzmenuguide.org/the-ritz-restaurant-menu/ — restaurant menu guide
+- https://ritzmenuguide.org/ritz-menu-prices/ — realistic price totals
+- https://ritzmenuguide.org/ritz-afternoon-tea/ — afternoon tea guide
+- https://ritzmenuguide.org/ritz-booking-guide/ — how to book
+- https://ritzmenuguide.org/the-ritz-london-cookbook/ — cookbook guide
+- https://ritzmenuguide.org/about/ — about the site and author
+- https://ritzmenuguide.org/contact/ — contact
+- https://ritzmenuguide.org/privacy-policy/
+- https://ritzmenuguide.org/terms-of-service/
+
+## Sitemap
+
+- https://ritzmenuguide.org/sitemap-index.xml
+
+## Contact
+
+- https://ritzmenuguide.org/contact/
