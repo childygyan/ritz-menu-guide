@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://ritz-menu-guide.pages.dev",
+  site: "https://ritzmenuguide.org",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
