@@ -33,11 +33,22 @@ const guides = [
     <meta name="description" content={description} />
     <meta name="author" content="Firoz Khan" />
     <meta name="google-site-verification" content="f-HbgUJMaf9B7liLhv0ZBEQjUizc5srZC9D6KOYUVrY" />
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — analytics runs only with cookie consent.
+         The stored choice is read here, BEFORE config, so a first visit
+         sends nothing until the visitor accepts the cookie banner. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSD53Z8P22"></script>
-    <script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      var ritzSavedConsent = null;
+      try { ritzSavedConsent = localStorage.getItem('ritz-cookie-consent'); } catch (e) {}
+      var ritzGranted = ritzSavedConsent === 'accepted' ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        'ad_storage': ritzGranted,
+        'ad_user_data': ritzGranted,
+        'ad_personalization': ritzGranted,
+        'analytics_storage': ritzGranted
+      });
       gtag('js', new Date());
 
       gtag('config', 'G-PSD53Z8P22');
@@ -142,6 +153,9 @@ const guides = [
               menus, afternoon tea, prices, and booking. Prices from official Ritz sources,
               dated — always verify with the hotel before visiting.
             </p>
+            <p class="mt-3 text-sm">
+              Contact: <a href="mailto:hello@ritzmenuguide.org" class="text-gold hover:underline">hello@ritzmenuguide.org</a>
+            </p>
           </div>
           <div>
             <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-4">Guides</p>
@@ -158,6 +172,7 @@ const guides = [
               <li><a href="/contact/" class="hover:text-gold transition-colors">Contact</a></li>
               <li><a href="/privacy-policy/" class="hover:text-gold transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service/" class="hover:text-gold transition-colors">Terms of Service</a></li>
+              <li><button type="button" id="cookie-preferences" class="hover:text-gold transition-colors cursor-pointer">Cookie Preferences</button></li>
             </ul>
           </div>
         </div>
@@ -227,6 +242,69 @@ const guides = [
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape") closeAll();
         });
+      })();
+    </script>
+
+    <!-- Cookie consent banner -->
+    <div id="cookie-consent" hidden class="fixed bottom-0 inset-x-0 z-50 border-t border-gold/40 bg-ink text-cream shadow-2xl">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <p class="text-sm text-cream/85 leading-relaxed flex-1">
+          We use cookies for analytics and, soon, advertising. Choose "Accept" to allow
+          them or "Reject" to continue with only strictly necessary storage. See our
+          <a href="/privacy-policy/" class="text-gold hover:underline font-semibold">Privacy Policy</a>.
+        </p>
+        <div class="flex gap-2 shrink-0">
+          <button type="button" data-consent-reject class="px-4 py-2 text-sm font-semibold rounded-lg border border-cream/30 text-cream hover:border-gold hover:text-gold transition-colors cursor-pointer">Reject</button>
+          <button type="button" data-consent-accept class="px-4 py-2 text-sm font-semibold rounded-lg bg-gold text-ink hover:bg-gold-dark transition-colors cursor-pointer">Accept</button>
+        </div>
+      </div>
+    </div>
+    <script is:inline>
+      // Cookie consent: banner shows until a choice is stored. Accept fires
+      // a page_view (the head config's auto page_view is held while consent
+      // is denied); Reject keeps analytics and advertising storage denied.
+      (function () {
+        var KEY = "ritz-cookie-consent";
+        var banner = document.getElementById("cookie-consent");
+        function apply(choice) {
+          var granted = choice === "accepted" ? "granted" : "denied";
+          if (typeof gtag === "function") {
+            gtag("consent", "update", {
+              ad_storage: granted,
+              ad_user_data: granted,
+              ad_personalization: granted,
+              analytics_storage: granted,
+            });
+          }
+        }
+        var saved = null;
+        try { saved = localStorage.getItem(KEY); } catch (e) {}
+        if (saved) {
+          apply(saved);
+        } else if (banner) {
+          banner.hidden = false;
+        }
+        function choose(value) {
+          try { localStorage.setItem(KEY, value); } catch (e) {}
+          apply(value);
+          if (value === "accepted" && typeof gtag === "function") {
+            gtag("event", "page_view", {
+              page_location: window.location.href,
+              page_title: document.title,
+            });
+          }
+          if (banner) banner.hidden = true;
+        }
+        document.querySelectorAll("[data-consent-accept]").forEach(function (b) {
+          b.addEventListener("click", function () { choose("accepted"); });
+        });
+        document.querySelectorAll("[data-consent-reject]").forEach(function (b) {
+          b.addEventListener("click", function () { choose("rejected"); });
+        });
+        var prefs = document.getElementById("cookie-preferences");
+        if (prefs && banner) {
+          prefs.addEventListener("click", function () { banner.hidden = false; });
+        }
       })();
     </script>
   </body>
